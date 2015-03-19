@@ -1,8 +1,8 @@
 <form action="/user/create" method="POST" class="form-signin">
   <h2 class="form-signin-heading">Create an Account</h2>
-  <% if(flash && flash.err) %>
+  <% if(flash && flash.err) { %>
   	<ul class="alert alert-success">
-  <% Object.keys(flash.err).forEach(function(error) {
+  <% Object.keys(flash.err).forEach(function(error) { %>
   	<li><%- JSON.stringify(flash.err[error]) %></li>
   	<% }) %>
   </ul>
